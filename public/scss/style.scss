@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&display=swap");
+@import "colors";
+
+$font: "IBM Plex Mono", monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $gray;
+  color: $deepBlue;
+}
+
+.dark {
+  background-color: $deepBlue;
+  color: $gray;
+}
+
+body,
+button {
+  font-family: $font;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.button__container {
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    padding: 1rem;
+    border-radius: 2rem;
+    border-color: transparent;
+    cursor: pointer;
+    background-color: $deepBlue;
+    color: $gray;
+  }
+
+  .darkMode__on {
+    background-color: $gray;
+    color: $deepBlue;
+  }
+}
+
+.user__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+figure {
+  img {
+    width: 25rem;
+    border-radius: 50%;
+    margin: 1rem;
+  }
+}
+
+.user__info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 1024px) {
+  .user__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
